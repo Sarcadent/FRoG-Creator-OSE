@@ -2226,6 +2226,10 @@ Private Sub scrlDefReq_Change()
     Label12.Caption = scrlDefReq.value
 End Sub
 
+Private Sub scrlLevelReq_Change()
+    LblLevelReq.Caption = scrlLevelReq.value
+End Sub
+
 Private Sub scrlPD_Change()
     PicPD.Picture = LoadPNG(App.Path & "\GFX\Paperdolls\Paperdolls" & scrlPD.value & ".png")
     PicPD.Height = 64

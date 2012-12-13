@@ -5513,6 +5513,7 @@ Dim i As Long
     frmItemEditor.PicPD.Picture = LoadPNG(App.Path & "\GFX\Paperdolls\Paperdolls0.png")
     
     frmItemEditor.CheckEmpi.value = Item(EditorIndex).Empilable
+    frmItemEditor.scrlLevelReq.value = Item(EditorIndex).LevelReq
     frmItemEditor.CheckEmpi.Enabled = True
     
     If (frmItemEditor.cmbType.ListIndex >= ITEM_TYPE_WEAPON) And (frmItemEditor.cmbType.ListIndex <= ITEM_TYPE_SHIELD) Then
@@ -5536,7 +5537,6 @@ Dim i As Long
         frmItemEditor.scrlAddSpeed.value = Item(EditorIndex).AddSpeed
         frmItemEditor.scrlAddEXP.value = Item(EditorIndex).AddEXP
         frmItemEditor.scrlAttackSpeed.value = Item(EditorIndex).AttackSpeed
-        frmItemEditor.scrlLevelReq.value = Item(EditorIndex).LevelReq
         
         If Item(EditorIndex).Data3 > 0 Then frmItemEditor.chkBow.value = Checked Else frmItemEditor.chkBow.value = Unchecked
         
@@ -5633,6 +5633,7 @@ Public Sub ItemEditorOk()
       
     Item(EditorIndex).Empilable = frmItemEditor.CheckEmpi.value
     Item(EditorIndex).tArme = 0
+    Item(EditorIndex).LevelReq = frmItemEditor.scrlLevelReq.value
 
     If (frmItemEditor.cmbType.ListIndex >= ITEM_TYPE_WEAPON) And (frmItemEditor.cmbType.ListIndex <= ITEM_TYPE_SHIELD) Then
         Item(EditorIndex).Data1 = frmItemEditor.scrlDurability.value
@@ -5644,7 +5645,6 @@ Public Sub ItemEditorOk()
         
         Item(EditorIndex).ClassReq = frmItemEditor.scrlClassReq.value
         Item(EditorIndex).AccessReq = frmItemEditor.scrlAccessReq.value
-        Item(EditorIndex).LevelReq = frmItemEditor.scrlLevelReq.value
         
         Item(EditorIndex).AddHP = frmItemEditor.scrlAddHP.value
         Item(EditorIndex).AddMP = frmItemEditor.scrlAddMP.value
