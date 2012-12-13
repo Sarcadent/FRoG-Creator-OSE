@@ -1,4 +1,25 @@
 ﻿################################
+INFORMATION SUR FROG CREATOR SARCADENT'S VERSION: 
+Cette version de Frog Creator n'est pas officielle. Elle a pour but d'ajouter des fonctionnalités qui selon moi (Sarcadent) manquaient.
+Liste des ajouts fait:
+-
+-
+-
+Liste des ajouts à faire:
+-un système de niveau requis pour les objets
+-un système météo par map
+-un système de son pour les armes
+-plus de sub disponible en main.txt
+-possibilité de mettre des pnj dans une guilde
+-quelques petites optimisations par-ci par-là
+
+Développeur:
+-Sarcadent
+
+#topic de discussion: http://www.frogcreator.fr/ose/showthread.php?tid=8495
+################################
+
+################################
 FRoG Creator Open Source Edition
 ################################
 # French software, French language. Sry :)
