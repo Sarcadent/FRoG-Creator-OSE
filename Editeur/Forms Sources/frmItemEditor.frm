@@ -2050,6 +2050,7 @@ Private Sub cmbBow_Click()
     'picBow.Top = (Arrows(cmbBow.ListIndex + 1).Pic * 32) * -1
 End Sub
 
+
 Private Sub cmdOk_Click()
     Call ItemEditorOk
 End Sub
@@ -2067,6 +2068,18 @@ Private Sub cmbType_Click()
     fraBow.Visible = False
     SSTab1.Width = 535
     frmItemEditor.Width = 8145
+    
+    If cmbType.ListIndex = ITEM_TYPE_NONE Or cbmType.ListIndex = ITEM_TYPE_SPELL Or cbmType.ListIndex = ITEM_TYPE_CURRENCY Then
+        scrlLevelReq.Visible = False
+        LblLevelReq.Visible = False
+        Label36.Visible = False
+        FraOption.Height = 615
+    Else
+        scrlLevelReq.Visible = True
+        LblLevelReq.Visible = True
+        Label36.Visible = True
+        FraOption.Height = 1215
+    End If
     
     If (cmbType.ListIndex >= ITEM_TYPE_WEAPON) And (cmbType.ListIndex <= ITEM_TYPE_SHIELD) Then
         If cmbType.ListIndex = ITEM_TYPE_WEAPON Then

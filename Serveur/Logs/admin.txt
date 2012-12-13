@@ -129,3 +129,7 @@
 13:26:21: Admin edite le famillier #1.
 13:26:28: Admin sauvegarde le famillier #1.
 13:27:13: Admin a modifié(e) la carte #1
+13:38:07: Admin edite l'objet #1.
+13:42:10: Admin edite l'objet #1.
+13:45:01: Admin edite l'objet #1.
+13:45:58: Admin sauvegarde l'objet #1.
