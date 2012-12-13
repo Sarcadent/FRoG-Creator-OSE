@@ -5633,7 +5633,12 @@ Public Sub ItemEditorOk()
       
     Item(EditorIndex).Empilable = frmItemEditor.CheckEmpi.value
     Item(EditorIndex).tArme = 0
-    Item(EditorIndex).LevelReq = frmItemEditor.scrlLevelReq.value
+    
+    If (frmItemEditor.cmbType.ListIndex = ITEM_TYPE_NONE) Or (frmItemEditor.cmbType.ListIndex >= ITEM_TYPE_SPELL) Or (frmItemEditor.cmbType.ListIndex >= ITEM_TYPE_CURRENCY) Then
+        Item(EditorIndex).LevelReq = 0
+    Else
+        Item(EditorIndex).LevelReq = frmItemEditor.scrlLevelReq.value
+    End If
 
     If (frmItemEditor.cmbType.ListIndex >= ITEM_TYPE_WEAPON) And (frmItemEditor.cmbType.ListIndex <= ITEM_TYPE_SHIELD) Then
         Item(EditorIndex).Data1 = frmItemEditor.scrlDurability.value

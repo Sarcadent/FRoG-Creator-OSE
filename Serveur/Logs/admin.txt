@@ -133,3 +133,6 @@
 13:42:10: Admin edite l'objet #1.
 13:45:01: Admin edite l'objet #1.
 13:45:58: Admin sauvegarde l'objet #1.
+13:49:11: Admin edite l'objet #10.
+13:49:17: Admin edite l'objet #3.
+13:49:20: Admin edite l'objet #1.

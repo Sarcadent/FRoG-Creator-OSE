@@ -2069,7 +2069,7 @@ Private Sub cmbType_Click()
     SSTab1.Width = 535
     frmItemEditor.Width = 8145
     
-    If cmbType.ListIndex = ITEM_TYPE_NONE Or cbmType.ListIndex = ITEM_TYPE_SPELL Or cbmType.ListIndex = ITEM_TYPE_CURRENCY Then
+    If cmbType.ListIndex = ITEM_TYPE_NONE Or cmbType.ListIndex = ITEM_TYPE_SPELL Or cmbType.ListIndex = ITEM_TYPE_CURRENCY Then
         scrlLevelReq.Visible = False
         LblLevelReq.Visible = False
         Label36.Visible = False
