@@ -1146,6 +1146,7 @@ mont:
         
         Item(n).Sex = Val(Parse(27))
         Item(n).tArme = Val(Parse(28))
+        Item(n).LevelReq = Val(Parse(29))
         ' Initialize the item editor
         Call ItemEditorInit
         Exit Sub
@@ -1557,7 +1558,7 @@ mont:
             frmMirage.quetetimersec.Interval = 1000
             Seco = Val(Parse(1)) - ((Val(Parse(1)) \ 60) * 60)
             Minu = (Val(Parse(1)) \ 60)
-            If Len(CStr(Minu)) > 2 Then frmMirage.Minute.Caption = Minu & ":" Else frmMirage.Minute.Caption = "0" & Minu & ":"
+            If Len(CStr(Minu)) > 2 Then frmMirage.minute.Caption = Minu & ":" Else frmMirage.minute.Caption = "0" & Minu & ":"
             If Len(CStr(Seco)) > 2 Then frmMirage.seconde.Caption = Seco Else frmMirage.seconde.Caption = "0" & Seco
             frmMirage.quetetimersec.Enabled = True
             Exit Sub
@@ -1709,10 +1710,10 @@ mont:
             Trade(xx).Selected = NO
         Next xx
         Trade(1).Selected = YES
-        frmTrade.shopType.Top = frmTrade.Label(1).Top
-        frmTrade.shopType.Left = frmTrade.Label(1).Left
-        frmTrade.shopType.Height = frmTrade.Label(1).Height
-        frmTrade.shopType.Width = frmTrade.Label(1).Width
+        frmTrade.shopType.Top = frmTrade.label(1).Top
+        frmTrade.shopType.Left = frmTrade.label(1).Left
+        frmTrade.shopType.Height = frmTrade.label(1).Height
+        frmTrade.shopType.Width = frmTrade.label(1).Width
         Trade(1).SelectedItem = 1
         NumShop = ShopNum
         
@@ -2592,7 +2593,7 @@ FileName = App.Path & "\items\item" & ItemNum & ".fco"
     
     Packet = "SAVEITEM" & SEP_CHAR & ItemNum & SEP_CHAR & Trim$(Item(ItemNum).name) & SEP_CHAR & Item(ItemNum).Pic & SEP_CHAR & Item(ItemNum).Type & SEP_CHAR & Item(ItemNum).Data1 & SEP_CHAR & Item(ItemNum).Data2 & SEP_CHAR & Item(ItemNum).Data3 & SEP_CHAR & Item(ItemNum).StrReq & SEP_CHAR & Item(ItemNum).DefReq & SEP_CHAR & Item(ItemNum).SpeedReq & SEP_CHAR & Item(ItemNum).ClassReq & SEP_CHAR & Item(ItemNum).AccessReq & SEP_CHAR
     Packet = Packet & Item(ItemNum).AddHP & SEP_CHAR & Item(ItemNum).AddMP & SEP_CHAR & Item(ItemNum).AddSP & SEP_CHAR & Item(ItemNum).AddStr & SEP_CHAR & Item(ItemNum).AddDef & SEP_CHAR & Item(ItemNum).AddMagi & SEP_CHAR & Item(ItemNum).AddSpeed & SEP_CHAR & Item(ItemNum).AddEXP & SEP_CHAR & Item(ItemNum).desc & SEP_CHAR & Item(ItemNum).AttackSpeed
-    Packet = Packet & SEP_CHAR & Item(ItemNum).NCoul & SEP_CHAR & Item(ItemNum).paperdoll & SEP_CHAR & Item(ItemNum).paperdollPic & SEP_CHAR & Item(ItemNum).Empilable & SEP_CHAR & Item(EditorIndex).Sex & SEP_CHAR & Item(EditorIndex).tArme & END_CHAR
+    Packet = Packet & SEP_CHAR & Item(ItemNum).NCoul & SEP_CHAR & Item(ItemNum).paperdoll & SEP_CHAR & Item(ItemNum).paperdollPic & SEP_CHAR & Item(ItemNum).Empilable & SEP_CHAR & Item(EditorIndex).Sex & SEP_CHAR & Item(EditorIndex).tArme & SEP_CHAR & Item(ItemNum).LevelReq & END_CHAR
     Call SendData(Packet)
     Call EcrireEtat("Sauvegarde des objets")
 End Sub

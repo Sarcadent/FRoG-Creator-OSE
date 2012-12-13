@@ -79,3 +79,6 @@
 16:13:09: mimus a modifié(e) la carte #1
 16:13:39: mimus a modifié(e) la carte #1
 17:08:28: mimus a réinitialisé(e) la carte #1
+11:57:41: Admin a modifié(e) la carte #1
+11:58:53: Admin a modifié(e) la carte #1
+11:59:09: Admin edite l'objet #1.

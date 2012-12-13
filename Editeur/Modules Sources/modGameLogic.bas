@@ -5536,6 +5536,8 @@ Dim i As Long
         frmItemEditor.scrlAddSpeed.value = Item(EditorIndex).AddSpeed
         frmItemEditor.scrlAddEXP.value = Item(EditorIndex).AddEXP
         frmItemEditor.scrlAttackSpeed.value = Item(EditorIndex).AttackSpeed
+        frmItemEditor.scrlLevelReq.value = Item(EditorIndex).LevelReq
+        
         If Item(EditorIndex).Data3 > 0 Then frmItemEditor.chkBow.value = Checked Else frmItemEditor.chkBow.value = Unchecked
         
         frmItemEditor.cmbBow.Clear
@@ -5642,6 +5644,7 @@ Public Sub ItemEditorOk()
         
         Item(EditorIndex).ClassReq = frmItemEditor.scrlClassReq.value
         Item(EditorIndex).AccessReq = frmItemEditor.scrlAccessReq.value
+        Item(EditorIndex).LevelReq = frmItemEditor.scrlLevelReq.value
         
         Item(EditorIndex).AddHP = frmItemEditor.scrlAddHP.value
         Item(EditorIndex).AddMP = frmItemEditor.scrlAddMP.value

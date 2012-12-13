@@ -1037,6 +1037,7 @@ Sub ClearItem(ByVal Index As Long)
     Item(Index).SpeedReq = 0
     Item(Index).ClassReq = -1
     Item(Index).AccessReq = 0
+    Item(Index).LevelReq = 0
     
     Item(Index).paperdoll = 0
     Item(Index).paperdollPic = 0

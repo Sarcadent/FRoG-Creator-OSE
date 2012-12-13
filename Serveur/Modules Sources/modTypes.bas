@@ -973,6 +973,7 @@ With item(Index)
     .SpeedReq = 0
     .ClassReq = -1
     .AccessReq = 0
+    .LevelReq = 0
     
     .paperdoll = 0
     .paperdollPic = 0

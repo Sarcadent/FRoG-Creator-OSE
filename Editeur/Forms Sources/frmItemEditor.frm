@@ -4,7 +4,7 @@ Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form frmItemEditor 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Éditeur d'objets"
-   ClientHeight    =   7080
+   ClientHeight    =   7395
    ClientLeft      =   120
    ClientTop       =   285
    ClientWidth     =   11355
@@ -19,7 +19,7 @@ Begin VB.Form frmItemEditor
    EndProperty
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
-   ScaleHeight     =   472
+   ScaleHeight     =   493
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   757
    StartUpPosition =   2  'CenterScreen
@@ -47,13 +47,13 @@ Begin VB.Form frmItemEditor
       Width           =   465
    End
    Begin TabDlg.SSTab SSTab1 
-      Height          =   7065
+      Height          =   7305
       Left            =   0
       TabIndex        =   0
       Top             =   0
       Width           =   11325
       _ExtentX        =   19976
-      _ExtentY        =   12462
+      _ExtentY        =   12885
       _Version        =   393216
       Tabs            =   1
       TabsPerRow      =   1
@@ -175,14 +175,6 @@ Begin VB.Form frmItemEditor
          Top             =   960
          Visible         =   0   'False
          Width           =   2355
-         Begin VB.HScrollBar scrlLevelReq 
-            Height          =   255
-            Left            =   300
-            Max             =   1000
-            TabIndex        =   113
-            Top             =   5160
-            Width           =   1875
-         End
          Begin VB.HScrollBar scrlSexReq 
             Height          =   255
             Left            =   300
@@ -257,46 +249,6 @@ Begin VB.Form frmItemEditor
             TabIndex        =   65
             Top             =   4620
             Width           =   1875
-         End
-         Begin VB.Label LblLevelReq 
-            Alignment       =   1  'Right Justify
-            BackStyle       =   0  'Transparent
-            Caption         =   "0"
-            BeginProperty Font 
-               Name            =   "Segoe UI"
-               Size            =   6.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Left            =   240
-            TabIndex        =   115
-            ToolTipText     =   "Accès requit"
-            Top             =   4920
-            Width           =   1935
-         End
-         Begin VB.Label Label36 
-            Alignment       =   1  'Right Justify
-            BackStyle       =   0  'Transparent
-            Caption         =   "Niveau Requis:"
-            BeginProperty Font 
-               Name            =   "Segoe UI"
-               Size            =   6.75
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   375
-            Left            =   230
-            TabIndex        =   114
-            ToolTipText     =   "Accès requit"
-            Top             =   4920
-            Width           =   975
          End
          Begin VB.Label Label35 
             Alignment       =   1  'Right Justify
@@ -1073,11 +1025,19 @@ Begin VB.Form frmItemEditor
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   615
+         Height          =   1215
          Left            =   3360
          TabIndex        =   101
          Top             =   2400
          Width           =   2115
+         Begin VB.HScrollBar scrlLevelReq 
+            Height          =   255
+            Left            =   120
+            Max             =   1000
+            TabIndex        =   115
+            Top             =   840
+            Width           =   1875
+         End
          Begin VB.CheckBox CheckEmpi 
             Caption         =   "Objet Empilable"
             BeginProperty Font 
@@ -1094,6 +1054,46 @@ Begin VB.Form frmItemEditor
             TabIndex        =   102
             Top             =   240
             Width           =   1875
+         End
+         Begin VB.Label Label36 
+            Alignment       =   1  'Right Justify
+            BackStyle       =   0  'Transparent
+            Caption         =   "Niveau Requis:"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   6.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   0
+            TabIndex        =   114
+            ToolTipText     =   "Accès requit"
+            Top             =   600
+            Width           =   975
+         End
+         Begin VB.Label LblLevelReq 
+            Alignment       =   1  'Right Justify
+            BackStyle       =   0  'Transparent
+            Caption         =   "0"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   6.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   0
+            TabIndex        =   113
+            ToolTipText     =   "Accès requit"
+            Top             =   600
+            Width           =   1935
          End
       End
       Begin VB.CommandButton cmdOk 
@@ -1188,7 +1188,7 @@ Begin VB.Form frmItemEditor
          Height          =   1995
          Left            =   3360
          TabIndex        =   59
-         Top             =   3060
+         Top             =   3600
          Visible         =   0   'False
          Width           =   2115
          Begin VB.PictureBox Pic 
@@ -1320,7 +1320,7 @@ Begin VB.Form frmItemEditor
          Height          =   1575
          Left            =   3360
          TabIndex        =   32
-         Top             =   5040
+         Top             =   5640
          Visible         =   0   'False
          Width           =   2115
          Begin VB.PictureBox Picture2 
