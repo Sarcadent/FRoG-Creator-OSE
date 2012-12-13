@@ -504,6 +504,7 @@ Type ItemRec
     SpeedReq As Long
     ClassReq As Long
     AccessReq As Byte
+    LevelReq As Integer
     
     paperdoll As Byte
     paperdollPic As Long

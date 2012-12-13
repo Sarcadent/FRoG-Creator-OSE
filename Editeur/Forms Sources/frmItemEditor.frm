@@ -1,10 +1,10 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "Tabctl32.ocx"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form frmItemEditor 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Éditeur d'objets"
-   ClientHeight    =   6705
+   ClientHeight    =   7080
    ClientLeft      =   120
    ClientTop       =   285
    ClientWidth     =   11355
@@ -19,7 +19,7 @@ Begin VB.Form frmItemEditor
    EndProperty
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
-   ScaleHeight     =   447
+   ScaleHeight     =   472
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   757
    StartUpPosition =   2  'CenterScreen
@@ -47,13 +47,13 @@ Begin VB.Form frmItemEditor
       Width           =   465
    End
    Begin TabDlg.SSTab SSTab1 
-      Height          =   6705
+      Height          =   7065
       Left            =   0
       TabIndex        =   0
       Top             =   0
       Width           =   11325
       _ExtentX        =   19976
-      _ExtentY        =   11827
+      _ExtentY        =   12462
       _Version        =   393216
       Tabs            =   1
       TabsPerRow      =   1
@@ -135,7 +135,7 @@ Begin VB.Form frmItemEditor
          Left            =   6780
          TabIndex        =   99
          ToolTipText     =   "Quitte la fenêtre d'édition sans enregistrer l'objet"
-         Top             =   6120
+         Top             =   6480
          Width           =   1155
       End
       Begin VB.ComboBox CtArme 
@@ -169,12 +169,20 @@ Begin VB.Form frmItemEditor
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   5055
+         Height          =   5535
          Left            =   5520
          TabIndex        =   64
          Top             =   960
          Visible         =   0   'False
          Width           =   2355
+         Begin VB.HScrollBar scrlLevelReq 
+            Height          =   255
+            Left            =   300
+            Max             =   1000
+            TabIndex        =   113
+            Top             =   5160
+            Width           =   1875
+         End
          Begin VB.HScrollBar scrlSexReq 
             Height          =   255
             Left            =   300
@@ -249,6 +257,46 @@ Begin VB.Form frmItemEditor
             TabIndex        =   65
             Top             =   4620
             Width           =   1875
+         End
+         Begin VB.Label LblLevelReq 
+            Alignment       =   1  'Right Justify
+            BackStyle       =   0  'Transparent
+            Caption         =   "0"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   6.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   240
+            TabIndex        =   115
+            ToolTipText     =   "Accès requit"
+            Top             =   4920
+            Width           =   1935
+         End
+         Begin VB.Label Label36 
+            Alignment       =   1  'Right Justify
+            BackStyle       =   0  'Transparent
+            Caption         =   "Niveau Requis:"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   6.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   375
+            Left            =   230
+            TabIndex        =   114
+            ToolTipText     =   "Accès requit"
+            Top             =   4920
+            Width           =   975
          End
          Begin VB.Label Label35 
             Alignment       =   1  'Right Justify
@@ -1063,7 +1111,7 @@ Begin VB.Form frmItemEditor
          Left            =   5640
          TabIndex        =   100
          ToolTipText     =   "Quitte la fenêtre d'édition et enregistre l'objet"
-         Top             =   6120
+         Top             =   6480
          Width           =   1155
       End
       Begin VB.ComboBox cmbType 
@@ -2097,7 +2145,7 @@ Private Sub HScroll1_Change()
 End Sub
 
 Private Sub HScroll2_Change()
-'Call AffSurfPic(DD_PaperDollSurf, picSelect100, 0, HScroll2.value * PIC_Y)
+    LblLevelReq.Caption = scrlLevelReq.value
 End Sub
 
 
