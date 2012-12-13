@@ -1320,6 +1320,8 @@ mont:
             .paperdollPic = Val(Parse(25))
             .Empilable = Val(Parse(26))
             .tArme = Val(Parse(27))
+            .LevelReq = Val(Parse(28))
+            
         End With
         Exit Sub
     End If
@@ -1477,7 +1479,7 @@ mont:
             Seco = Val(Parse(1)) - ((Val(Parse(1)) \ 60) * 60)
             Minu = Val(Parse(1)) \ 60
             frmMirage.tmpsquete.Visible = True
-            If Len(STR$(Minu)) > 2 Then frmMirage.Minute.Caption = Minu & ":" Else frmMirage.Minute.Caption = "0" & Minu & ":"
+            If Len(STR$(Minu)) > 2 Then frmMirage.minute.Caption = Minu & ":" Else frmMirage.minute.Caption = "0" & Minu & ":"
             If Len(STR$(Seco)) > 2 Then frmMirage.seconde.Caption = Seco Else frmMirage.seconde.Caption = "0" & Seco
             frmMirage.quetetimersec.Enabled = True
             Exit Sub
@@ -1593,10 +1595,10 @@ mont:
         
         Trade(1).Selected = YES
                     
-        frmTrade.shopType.Top = frmTrade.Label(1).Top
-        frmTrade.shopType.Left = frmTrade.Label(1).Left
-        frmTrade.shopType.height = frmTrade.Label(1).height
-        frmTrade.shopType.Width = frmTrade.Label(1).Width
+        frmTrade.shopType.Top = frmTrade.label(1).Top
+        frmTrade.shopType.Left = frmTrade.label(1).Left
+        frmTrade.shopType.height = frmTrade.label(1).height
+        frmTrade.shopType.Width = frmTrade.label(1).Width
         Trade(1).SelectedItem = 1
         
         NumShop = ShopNum
