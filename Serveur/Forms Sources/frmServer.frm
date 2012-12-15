@@ -1,7 +1,7 @@
 VERSION 5.00
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
-Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "mswinsck.ocx"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "Mscomctl.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "Tabctl32.ocx"
+Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "Mswinsck.ocx"
 Begin VB.Form frmServer 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "FRoG Server"
@@ -35,6 +35,7 @@ Begin VB.Form frmServer
       _ExtentY        =   8467
       _Version        =   393216
       Tabs            =   4
+      Tab             =   2
       TabsPerRow      =   4
       TabHeight       =   370
       TabMaxWidth     =   3175
@@ -49,47 +50,27 @@ Begin VB.Form frmServer
       EndProperty
       TabCaption(0)   =   "Discussions"
       TabPicture(0)   =   "frmServer.frx":17D2A
-      Tab(0).ControlEnabled=   -1  'True
-      Tab(0).Control(0)=   "Label6"
-      Tab(0).Control(0).Enabled=   0   'False
-      Tab(0).Control(1)=   "Image1"
-      Tab(0).Control(1).Enabled=   0   'False
-      Tab(0).Control(2)=   "mesgSave"
-      Tab(0).Control(2).Enabled=   0   'False
-      Tab(0).Control(3)=   "CustomMsg(0)"
-      Tab(0).Control(3).Enabled=   0   'False
-      Tab(0).Control(4)=   "Say(0)"
-      Tab(0).Control(4).Enabled=   0   'False
-      Tab(0).Control(5)=   "Frame5"
-      Tab(0).Control(5).Enabled=   0   'False
-      Tab(0).Control(6)=   "CustomMsg(1)"
-      Tab(0).Control(6).Enabled=   0   'False
-      Tab(0).Control(7)=   "CustomMsg(2)"
-      Tab(0).Control(7).Enabled=   0   'False
-      Tab(0).Control(8)=   "CustomMsg(3)"
-      Tab(0).Control(8).Enabled=   0   'False
-      Tab(0).Control(9)=   "CustomMsg(4)"
-      Tab(0).Control(9).Enabled=   0   'False
-      Tab(0).Control(10)=   "CustomMsg(5)"
-      Tab(0).Control(10).Enabled=   0   'False
-      Tab(0).Control(11)=   "Say(1)"
-      Tab(0).Control(11).Enabled=   0   'False
-      Tab(0).Control(12)=   "Say(2)"
-      Tab(0).Control(12).Enabled=   0   'False
-      Tab(0).Control(13)=   "Say(3)"
-      Tab(0).Control(13).Enabled=   0   'False
-      Tab(0).Control(14)=   "Say(4)"
-      Tab(0).Control(14).Enabled=   0   'False
-      Tab(0).Control(15)=   "Say(5)"
-      Tab(0).Control(15).Enabled=   0   'False
-      Tab(0).Control(16)=   "SSTab2"
-      Tab(0).Control(16).Enabled=   0   'False
-      Tab(0).Control(17)=   "picCMsg"
-      Tab(0).Control(17).Enabled=   0   'False
-      Tab(0).Control(18)=   "tmrChatLogs"
-      Tab(0).Control(18).Enabled=   0   'False
-      Tab(0).Control(19)=   "mesgSaveTimer"
-      Tab(0).Control(19).Enabled=   0   'False
+      Tab(0).ControlEnabled=   0   'False
+      Tab(0).Control(0)=   "mesgSaveTimer"
+      Tab(0).Control(1)=   "tmrChatLogs"
+      Tab(0).Control(2)=   "picCMsg"
+      Tab(0).Control(3)=   "SSTab2"
+      Tab(0).Control(4)=   "Say(5)"
+      Tab(0).Control(5)=   "Say(4)"
+      Tab(0).Control(6)=   "Say(3)"
+      Tab(0).Control(7)=   "Say(2)"
+      Tab(0).Control(8)=   "Say(1)"
+      Tab(0).Control(9)=   "CustomMsg(5)"
+      Tab(0).Control(10)=   "CustomMsg(4)"
+      Tab(0).Control(11)=   "CustomMsg(3)"
+      Tab(0).Control(12)=   "CustomMsg(2)"
+      Tab(0).Control(13)=   "CustomMsg(1)"
+      Tab(0).Control(14)=   "Frame5"
+      Tab(0).Control(15)=   "Say(0)"
+      Tab(0).Control(16)=   "CustomMsg(0)"
+      Tab(0).Control(17)=   "mesgSave"
+      Tab(0).Control(18)=   "Image1"
+      Tab(0).Control(19)=   "Label6"
       Tab(0).ControlCount=   20
       TabCaption(1)   =   "Joueur"
       TabPicture(1)   =   "frmServer.frx":17D46
@@ -125,7 +106,7 @@ Begin VB.Form frmServer
       Tab(1).ControlCount=   28
       TabCaption(2)   =   "Panneau de Contrôle"
       TabPicture(2)   =   "frmServer.frx":17D62
-      Tab(2).ControlEnabled=   0   'False
+      Tab(2).ControlEnabled=   -1  'True
       Tab(2).Control(0)=   "lblPort"
       Tab(2).Control(0).Enabled=   0   'False
       Tab(2).Control(1)=   "lblIP"
@@ -236,7 +217,7 @@ Begin VB.Form frmServer
          EndProperty
          ForeColor       =   &H80000008&
          Height          =   3375
-         Left            =   -74880
+         Left            =   120
          ScaleHeight     =   223
          ScaleMode       =   3  'Pixel
          ScaleWidth      =   223
@@ -508,7 +489,7 @@ Begin VB.Form frmServer
       Begin VB.Frame Frame4 
          Caption         =   "Options avancées"
          Height          =   1215
-         Left            =   -72960
+         Left            =   2040
          TabIndex        =   185
          Top             =   960
          Width           =   2415
@@ -550,7 +531,7 @@ Begin VB.Form frmServer
          EndProperty
          ForeColor       =   &H80000008&
          Height          =   1455
-         Left            =   -68640
+         Left            =   6360
          ScaleHeight     =   95
          ScaleMode       =   3  'Pixel
          ScaleWidth      =   215
@@ -759,13 +740,13 @@ Begin VB.Form frmServer
       Begin VB.Timer mesgSaveTimer 
          Enabled         =   0   'False
          Interval        =   3000
-         Left            =   6480
+         Left            =   -68520
          Top             =   240
       End
       Begin VB.Frame Frame8 
          Caption         =   "Gestion du temps :"
          Height          =   2055
-         Left            =   -69840
+         Left            =   5160
          TabIndex        =   150
          Top             =   2520
          Width           =   4815
@@ -1300,7 +1281,7 @@ Begin VB.Form frmServer
       End
       Begin VB.Timer tmrChatLogs 
          Interval        =   1000
-         Left            =   9840
+         Left            =   -65160
          Top             =   360
       End
       Begin VB.PictureBox picCMsg 
@@ -1316,7 +1297,7 @@ Begin VB.Form frmServer
          EndProperty
          ForeColor       =   &H80000008&
          Height          =   1935
-         Left            =   4320
+         Left            =   -70680
          ScaleHeight     =   1905
          ScaleWidth      =   3345
          TabIndex        =   44
@@ -1395,7 +1376,7 @@ Begin VB.Form frmServer
       End
       Begin TabDlg.SSTab SSTab2 
          Height          =   3015
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   122
          Top             =   360
          Width           =   8415
@@ -1614,7 +1595,7 @@ Begin VB.Form frmServer
       Begin VB.Frame Frame9 
          Caption         =   "Liste des Cartes"
          Height          =   1815
-         Left            =   -70440
+         Left            =   4560
          TabIndex        =   100
          Top             =   480
          Width           =   5535
@@ -1673,7 +1654,7 @@ Begin VB.Form frmServer
          Caption         =   "Dire"
          Height          =   255
          Index           =   5
-         Left            =   9120
+         Left            =   -65880
          TabIndex        =   43
          Top             =   3840
          Width           =   495
@@ -1682,7 +1663,7 @@ Begin VB.Form frmServer
          Caption         =   "Dire"
          Height          =   255
          Index           =   4
-         Left            =   9120
+         Left            =   -65880
          TabIndex        =   42
          Top             =   3240
          Width           =   495
@@ -1691,7 +1672,7 @@ Begin VB.Form frmServer
          Caption         =   "Dire"
          Height          =   255
          Index           =   3
-         Left            =   9120
+         Left            =   -65880
          TabIndex        =   41
          Top             =   2640
          Width           =   495
@@ -1700,7 +1681,7 @@ Begin VB.Form frmServer
          Caption         =   "Dire"
          Height          =   255
          Index           =   2
-         Left            =   9120
+         Left            =   -65880
          TabIndex        =   40
          Top             =   2040
          Width           =   495
@@ -1709,7 +1690,7 @@ Begin VB.Form frmServer
          Caption         =   "Dire"
          Height          =   255
          Index           =   1
-         Left            =   9120
+         Left            =   -65880
          TabIndex        =   39
          Top             =   1440
          Width           =   495
@@ -1718,7 +1699,7 @@ Begin VB.Form frmServer
          Caption         =   "Editer msg"
          Height          =   255
          Index           =   5
-         Left            =   8640
+         Left            =   -66360
          TabIndex        =   38
          Top             =   3600
          Width           =   1455
@@ -1727,7 +1708,7 @@ Begin VB.Form frmServer
          Caption         =   "Editer msg"
          Height          =   255
          Index           =   4
-         Left            =   8640
+         Left            =   -66360
          TabIndex        =   37
          Top             =   3000
          Width           =   1455
@@ -1736,7 +1717,7 @@ Begin VB.Form frmServer
          Caption         =   "Editer msg"
          Height          =   255
          Index           =   3
-         Left            =   8640
+         Left            =   -66360
          TabIndex        =   36
          Top             =   2400
          Width           =   1455
@@ -1745,7 +1726,7 @@ Begin VB.Form frmServer
          Caption         =   "Editer msg"
          Height          =   255
          Index           =   2
-         Left            =   8640
+         Left            =   -66360
          TabIndex        =   35
          Top             =   1800
          Width           =   1455
@@ -1754,7 +1735,7 @@ Begin VB.Form frmServer
          Caption         =   "Editer msg"
          Height          =   255
          Index           =   1
-         Left            =   8640
+         Left            =   -66360
          TabIndex        =   34
          Top             =   1200
          Width           =   1455
@@ -1762,7 +1743,7 @@ Begin VB.Form frmServer
       Begin VB.Frame Frame5 
          Caption         =   "Configuration des discussions :"
          Height          =   615
-         Left            =   120
+         Left            =   -74880
          TabIndex        =   28
          Top             =   3600
          Width           =   6855
@@ -1851,7 +1832,7 @@ Begin VB.Form frmServer
       Begin VB.Frame Frame3 
          Caption         =   "Classes"
          Height          =   1095
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   21
          Top             =   3600
          Width           =   1815
@@ -1875,7 +1856,7 @@ Begin VB.Form frmServer
       Begin VB.Frame Frame2 
          Caption         =   "Serveur"
          Height          =   2415
-         Left            =   -72960
+         Left            =   2040
          TabIndex        =   20
          Top             =   2280
          Width           =   2895
@@ -1944,7 +1925,7 @@ Begin VB.Form frmServer
       Begin VB.Frame Frame1 
          Caption         =   "Scripts"
          Height          =   1215
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   16
          Top             =   2280
          Width           =   1815
@@ -2050,7 +2031,7 @@ Begin VB.Form frmServer
          Caption         =   "Dire"
          Height          =   255
          Index           =   0
-         Left            =   9120
+         Left            =   -65880
          TabIndex        =   2
          Top             =   840
          Width           =   495
@@ -2059,7 +2040,7 @@ Begin VB.Form frmServer
          Caption         =   "Editer msg"
          Height          =   255
          Index           =   0
-         Left            =   8640
+         Left            =   -66360
          TabIndex        =   1
          Top             =   600
          Width           =   1455
@@ -2067,7 +2048,7 @@ Begin VB.Form frmServer
       Begin VB.Frame Frame7 
          Caption         =   "Fichier Texte"
          Height          =   1215
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   96
          Top             =   960
          Width           =   1815
@@ -2167,14 +2148,14 @@ Begin VB.Form frmServer
       Begin VB.Label mesgSave 
          ForeColor       =   &H0000FF00&
          Height          =   255
-         Left            =   7200
+         Left            =   -67800
          TabIndex        =   159
          Top             =   3840
          Width           =   1095
       End
       Begin VB.Image Image1 
          Height          =   240
-         Left            =   600
+         Left            =   -74400
          Picture         =   "frmServer.frx":17E62
          Top             =   600
          Visible         =   0   'False
@@ -2194,7 +2175,7 @@ Begin VB.Form frmServer
             Strikethrough   =   0   'False
          EndProperty
          Height          =   165
-         Left            =   240
+         Left            =   -74760
          TabIndex        =   139
          Top             =   4320
          Width           =   1170
@@ -2248,7 +2229,7 @@ Begin VB.Form frmServer
          BackStyle       =   0  'Transparent
          Caption         =   "Adresse IP:"
          Height          =   195
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   7
          Top             =   360
          Width           =   840
@@ -2258,7 +2239,7 @@ Begin VB.Form frmServer
          BackStyle       =   0  'Transparent
          Caption         =   "Port:"
          Height          =   195
-         Left            =   -74880
+         Left            =   120
          TabIndex        =   6
          Top             =   600
          Width           =   360

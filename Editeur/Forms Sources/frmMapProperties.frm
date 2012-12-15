@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "Tabctl32.ocx"
 Begin VB.Form frmMapProperties 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Propriétés de la Carte"
@@ -72,99 +72,52 @@ Begin VB.Form frmMapProperties
       TabPicture(1)   =   "frmMapProperties.frx":001C
       Tab(1).ControlEnabled=   0   'False
       Tab(1).Control(0)=   "Command5"
-      Tab(1).Control(0).Enabled=   0   'False
       Tab(1).Control(1)=   "Command4"
-      Tab(1).Control(1).Enabled=   0   'False
       Tab(1).Control(2)=   "plus(15)"
-      Tab(1).Control(2).Enabled=   0   'False
       Tab(1).Control(3)=   "plus(1)"
-      Tab(1).Control(3).Enabled=   0   'False
       Tab(1).Control(4)=   "plus(2)"
-      Tab(1).Control(4).Enabled=   0   'False
       Tab(1).Control(5)=   "plus(3)"
-      Tab(1).Control(5).Enabled=   0   'False
       Tab(1).Control(6)=   "plus(4)"
-      Tab(1).Control(6).Enabled=   0   'False
       Tab(1).Control(7)=   "plus(5)"
-      Tab(1).Control(7).Enabled=   0   'False
       Tab(1).Control(8)=   "plus(6)"
-      Tab(1).Control(8).Enabled=   0   'False
       Tab(1).Control(9)=   "plus(7)"
-      Tab(1).Control(9).Enabled=   0   'False
       Tab(1).Control(10)=   "plus(8)"
-      Tab(1).Control(10).Enabled=   0   'False
       Tab(1).Control(11)=   "plus(9)"
-      Tab(1).Control(11).Enabled=   0   'False
       Tab(1).Control(12)=   "plus(11)"
-      Tab(1).Control(12).Enabled=   0   'False
       Tab(1).Control(13)=   "plus(12)"
-      Tab(1).Control(13).Enabled=   0   'False
       Tab(1).Control(14)=   "plus(13)"
-      Tab(1).Control(14).Enabled=   0   'False
       Tab(1).Control(15)=   "plus(14)"
-      Tab(1).Control(15).Enabled=   0   'False
       Tab(1).Control(16)=   "plus(10)"
-      Tab(1).Control(16).Enabled=   0   'False
       Tab(1).Control(17)=   "Copy(9)"
-      Tab(1).Control(17).Enabled=   0   'False
       Tab(1).Control(18)=   "Copy(13)"
-      Tab(1).Control(18).Enabled=   0   'False
       Tab(1).Control(19)=   "Copy(12)"
-      Tab(1).Control(19).Enabled=   0   'False
       Tab(1).Control(20)=   "Copy(11)"
-      Tab(1).Control(20).Enabled=   0   'False
       Tab(1).Control(21)=   "Copy(10)"
-      Tab(1).Control(21).Enabled=   0   'False
       Tab(1).Control(22)=   "Copy(8)"
-      Tab(1).Control(22).Enabled=   0   'False
       Tab(1).Control(23)=   "Copy(7)"
-      Tab(1).Control(23).Enabled=   0   'False
       Tab(1).Control(24)=   "Copy(6)"
-      Tab(1).Control(24).Enabled=   0   'False
       Tab(1).Control(25)=   "Copy(5)"
-      Tab(1).Control(25).Enabled=   0   'False
       Tab(1).Control(26)=   "Copy(4)"
-      Tab(1).Control(26).Enabled=   0   'False
       Tab(1).Control(27)=   "Copy(3)"
-      Tab(1).Control(27).Enabled=   0   'False
       Tab(1).Control(28)=   "Copy(2)"
-      Tab(1).Control(28).Enabled=   0   'False
       Tab(1).Control(29)=   "Copy(1)"
-      Tab(1).Control(29).Enabled=   0   'False
       Tab(1).Control(30)=   "Copy(0)"
-      Tab(1).Control(30).Enabled=   0   'False
       Tab(1).Control(31)=   "Command1"
-      Tab(1).Control(31).Enabled=   0   'False
       Tab(1).Control(32)=   "cmbNpc(0)"
-      Tab(1).Control(32).Enabled=   0   'False
       Tab(1).Control(33)=   "cmbNpc(1)"
-      Tab(1).Control(33).Enabled=   0   'False
       Tab(1).Control(34)=   "cmbNpc(2)"
-      Tab(1).Control(34).Enabled=   0   'False
       Tab(1).Control(35)=   "cmbNpc(3)"
-      Tab(1).Control(35).Enabled=   0   'False
       Tab(1).Control(36)=   "cmbNpc(4)"
-      Tab(1).Control(36).Enabled=   0   'False
       Tab(1).Control(37)=   "cmbNpc(5)"
-      Tab(1).Control(37).Enabled=   0   'False
       Tab(1).Control(38)=   "cmbNpc(6)"
-      Tab(1).Control(38).Enabled=   0   'False
       Tab(1).Control(39)=   "cmbNpc(7)"
-      Tab(1).Control(39).Enabled=   0   'False
       Tab(1).Control(40)=   "cmbNpc(8)"
-      Tab(1).Control(40).Enabled=   0   'False
       Tab(1).Control(41)=   "cmbNpc(9)"
-      Tab(1).Control(41).Enabled=   0   'False
       Tab(1).Control(42)=   "cmbNpc(10)"
-      Tab(1).Control(42).Enabled=   0   'False
       Tab(1).Control(43)=   "cmbNpc(11)"
-      Tab(1).Control(43).Enabled=   0   'False
       Tab(1).Control(44)=   "cmbNpc(12)"
-      Tab(1).Control(44).Enabled=   0   'False
       Tab(1).Control(45)=   "cmbNpc(13)"
-      Tab(1).Control(45).Enabled=   0   'False
       Tab(1).Control(46)=   "cmbNpc(14)"
-      Tab(1).Control(46).Enabled=   0   'False
       Tab(1).ControlCount=   47
       Begin VB.CommandButton Command5 
          Caption         =   "Annuler"
@@ -659,10 +612,10 @@ Begin VB.Form frmMapProperties
             Strikethrough   =   0   'False
          EndProperty
          Height          =   420
-         Left            =   7920
+         Left            =   2400
          TabIndex        =   17
          ToolTipText     =   "Annuler les changements"
-         Top             =   7200
+         Top             =   7320
          Width           =   1440
       End
       Begin VB.CommandButton cmdOk 
@@ -677,10 +630,10 @@ Begin VB.Form frmMapProperties
             Strikethrough   =   0   'False
          EndProperty
          Height          =   420
-         Left            =   6000
+         Left            =   480
          TabIndex        =   14
          ToolTipText     =   "Confirmer les changements"
-         Top             =   7200
+         Top             =   7320
          Width           =   1440
       End
       Begin VB.CommandButton Copy 
@@ -982,7 +935,7 @@ Begin VB.Form frmMapProperties
          Left            =   4320
          TabIndex        =   73
          ToolTipText     =   "Musique entendue par les joueurs qui sont sur la carte"
-         Top             =   2880
+         Top             =   3600
          Width           =   5055
          Begin VB.CommandButton Command3 
             Caption         =   "Stop"
@@ -1193,11 +1146,31 @@ Begin VB.Form frmMapProperties
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   1980
+         Height          =   2700
          Left            =   4320
          TabIndex        =   67
          Top             =   840
          Width           =   5085
+         Begin VB.ComboBox CmbMeteo 
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            ItemData        =   "frmMapProperties.frx":003C
+            Left            =   240
+            List            =   "frmMapProperties.frx":004C
+            Style           =   2  'Dropdown List
+            TabIndex        =   95
+            ToolTipText     =   "Sélectionner la météo de la map"
+            Top             =   2160
+            Width           =   1815
+         End
          Begin VB.HScrollBar prAlpha 
             Enabled         =   0   'False
             Height          =   255
@@ -1220,9 +1193,9 @@ Begin VB.Form frmMapProperties
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "frmMapProperties.frx":003C
+            ItemData        =   "frmMapProperties.frx":007A
             Left            =   3600
-            List            =   "frmMapProperties.frx":003E
+            List            =   "frmMapProperties.frx":007C
             Style           =   2  'Dropdown List
             TabIndex        =   87
             ToolTipText     =   "Sélectionner le numéros du fichier de brouillard corespondant"
@@ -1258,14 +1231,31 @@ Begin VB.Form frmMapProperties
                Strikethrough   =   0   'False
             EndProperty
             Height          =   315
-            ItemData        =   "frmMapProperties.frx":0040
+            ItemData        =   "frmMapProperties.frx":007E
             Left            =   240
-            List            =   "frmMapProperties.frx":004D
+            List            =   "frmMapProperties.frx":008B
             Style           =   2  'Dropdown List
             TabIndex        =   7
             ToolTipText     =   "Sélectionner une spécialité (Pvp : joueurs contre joueurs)"
             Top             =   600
             Width           =   4695
+         End
+         Begin VB.Label Label6 
+            Caption         =   "Météo:"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Left            =   240
+            TabIndex        =   94
+            Top             =   1920
+            Width           =   735
          End
          Begin VB.Label Label5 
             Caption         =   "Numéro :"
@@ -1639,9 +1629,9 @@ Begin VB.Form frmMapProperties
          EndProperty
          Height          =   315
          Index           =   3
-         ItemData        =   "frmMapProperties.frx":007E
+         ItemData        =   "frmMapProperties.frx":00BC
          Left            =   -74520
-         List            =   "frmMapProperties.frx":0080
+         List            =   "frmMapProperties.frx":00BE
          Style           =   2  'Dropdown List
          TabIndex        =   24
          ToolTipText     =   "Sélectionner un pnj"
@@ -1717,9 +1707,9 @@ Begin VB.Form frmMapProperties
          EndProperty
          Height          =   315
          Index           =   7
-         ItemData        =   "frmMapProperties.frx":0082
+         ItemData        =   "frmMapProperties.frx":00C0
          Left            =   -74520
-         List            =   "frmMapProperties.frx":0084
+         List            =   "frmMapProperties.frx":00C2
          Style           =   2  'Dropdown List
          TabIndex        =   36
          ToolTipText     =   "Sélectionner un pnj"
@@ -1833,9 +1823,9 @@ Begin VB.Form frmMapProperties
          EndProperty
          Height          =   315
          Index           =   13
-         ItemData        =   "frmMapProperties.frx":0086
+         ItemData        =   "frmMapProperties.frx":00C4
          Left            =   -74520
-         List            =   "frmMapProperties.frx":0088
+         List            =   "frmMapProperties.frx":00C6
          Style           =   2  'Dropdown List
          TabIndex        =   54
          ToolTipText     =   "Sélectionner un pnj"
@@ -1908,6 +1898,7 @@ Private Sub chkFog_Click()
     End If
 End Sub
 
+
 Private Sub collco_Click()
 txtBootMap.Text = CoordM
 txtBootX.Text = CoordX
@@ -1953,6 +1944,7 @@ Dim x As Long, y As Long, i As Long
     Map(Player(MyIndex).Map).guildSoloView = Val(CGuild.value)
     Map(Player(MyIndex).Map).petView = Val(cPetView.value)
     Map(Player(MyIndex).Map).traversable = Val(Ctraversable.value)
+    Map(Player(MyIndex).Map).meteo = CmbMeteo.ListIndex
     
     For i = 1 To MAX_MAP_NPCS
         Map(Player(MyIndex).Map).Npc(i) = cmbNpc(i - 1).ListIndex
@@ -2006,6 +1998,7 @@ Dim x As Long, y As Long, i As Long
     If Map(Player(MyIndex).Map).Fog <> 0 Then chkFog.value = 1
     prAlpha.Enabled = chkFog.value
     cmbFog.Enabled = chkFog.value
+    CmbMeteo.ListIndex = Map(Player(MyIndex).Map).meteo
     
     For x = 1 To MAX_MAP_NPCS
         cmbNpc(x - 1).Clear
@@ -2053,6 +2046,7 @@ Dim x As Long, y As Long, i As Long
     Map(Player(MyIndex).Map).guildSoloView = Val(CGuild.value)
     Map(Player(MyIndex).Map).petView = Val(cPetView.value)
     Map(Player(MyIndex).Map).traversable = Val(Ctraversable.value)
+    Map(Player(MyIndex).Map).meteo = Val(CmbMeteo.ListIndex)
     
     For i = 1 To MAX_MAP_NPCS
         Map(Player(MyIndex).Map).Npc(i) = cmbNpc(i - 1).ListIndex

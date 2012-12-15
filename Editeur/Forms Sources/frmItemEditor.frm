@@ -2162,14 +2162,14 @@ Private Sub HScroll2_Change()
 End Sub
 
 
-Private Sub picPic_MouseDown(Button As Integer, Shift As Integer, x As Single, y As Single)
-    If Button = 1 Then EditorItemX = (x \ PIC_X): EditorItemY = (y \ PIC_Y) + VScroll1.value
+Private Sub picPic_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
+    If Button = 1 Then EditorItemX = (X \ PIC_X): EditorItemY = (Y \ PIC_Y) + VScroll1.value
     Call AffSurfPic(DD_ItemSurf, picSelect, EditorItemX * PIC_X, EditorItemY * PIC_Y)
     'Call BitBlt(picSelect.hDC, 0, 0, PIC_X, PIC_Y, picItems.hDC, EditorItemX * PIC_X, EditorItemY * PIC_Y, SRCCOPY)
 End Sub
 
-Private Sub picPic_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
-    If Button = 1 Then EditorItemX = (x \ PIC_X): EditorItemY = (y \ PIC_Y) + VScroll1.value
+Private Sub picPic_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+    If Button = 1 Then EditorItemX = (X \ PIC_X): EditorItemY = (Y \ PIC_Y) + VScroll1.value
     Call AffSurfPic(DD_ItemSurf, picSelect, EditorItemX * PIC_X, EditorItemY * PIC_Y)
     'Call BitBlt(picSelect.hDC, 0, 0, PIC_X, PIC_Y, picItems.hDC, EditorItemX * PIC_X, EditorItemY * PIC_Y, SRCCOPY)
 End Sub

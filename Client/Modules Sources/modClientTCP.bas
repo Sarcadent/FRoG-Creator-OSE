@@ -1030,6 +1030,7 @@ mont:
             .guildSoloView = Parse(n + 19)
             .petView = Parse(n + 20)
             .traversable = Parse(n + 21)
+            .meteo = Val(Parse(n + 22))
         End With
         
         GettingMap = True

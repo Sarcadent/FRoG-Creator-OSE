@@ -1775,6 +1775,23 @@ Dim OldMap As Long
         End If
     Next i
     'FIN PAPERDOLL
+    
+    
+    Select Case Map(MapNum).meteo
+        Case 0 'Soleil
+            Packet = "WEATHER" & SEP_CHAR & WEATHER_NONE & SEP_CHAR & RainIntensity & END_CHAR
+            Call SendDataTo(Index, Packet)
+        Case 1 'Pluie
+            Packet = "WEATHER" & SEP_CHAR & WEATHER_RAINING & SEP_CHAR & RainIntensity & END_CHAR
+            Call SendDataTo(Index, Packet)
+        Case 2 'Neige
+            Packet = "WEATHER" & SEP_CHAR & WEATHER_SNOWING & SEP_CHAR & RainIntensity & END_CHAR
+            Call SendDataTo(Index, Packet)
+        Case 3 'Orage
+            Packet = "WEATHER" & SEP_CHAR & WEATHER_THUNDER & SEP_CHAR & RainIntensity & END_CHAR
+            Call SendDataTo(Index, Packet)
+    End Select
+
 Exit Sub
 er:
 On Error Resume Next

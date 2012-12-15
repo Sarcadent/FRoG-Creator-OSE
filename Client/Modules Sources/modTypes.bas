@@ -445,6 +445,8 @@ Type MapRec
     guildSoloView As Byte
     petView As Byte
     traversable As Byte
+    meteo As Byte
+    frequenceMeteo As Byte
 End Type
 
 Type RecompRec
@@ -1111,6 +1113,7 @@ With Map(i)
     .Left = 0
     .Right = 0
     .Indoors = 0
+    .meteo = 0
         
     For y = 0 To MAX_MAPY
         For x = 0 To MAX_MAPX

@@ -831,6 +831,7 @@ mont:
         Map(MapNumS).guildSoloView = Parse(n + 19)
         Map(MapNumS).petView = Parse(n + 20)
         Map(MapNumS).traversable = Parse(n + 21)
+        Map(MapNumS).meteo = Val(Parse(n + 22))
         Exit Sub
     End If
     
@@ -2387,7 +2388,7 @@ Dim y As Long
         Packet = Packet & Map(Player(MyIndex).Map).Npcs(x).Imobile & SEP_CHAR
         DoEvents
     Next x
-    Packet = Packet & Map(Player(MyIndex).Map).PanoInf & SEP_CHAR & Map(Player(MyIndex).Map).TranInf & SEP_CHAR & Map(Player(MyIndex).Map).PanoSup & SEP_CHAR & Map(Player(MyIndex).Map).TranSup & SEP_CHAR & Map(Player(MyIndex).Map).Fog & SEP_CHAR & Map(Player(MyIndex).Map).FogAlpha & SEP_CHAR & Map(Player(MyIndex).Map).guildSoloView & SEP_CHAR & Map(Player(MyIndex).Map).petView & SEP_CHAR & Map(Player(MyIndex).Map).traversable & SEP_CHAR
+    Packet = Packet & Map(Player(MyIndex).Map).PanoInf & SEP_CHAR & Map(Player(MyIndex).Map).TranInf & SEP_CHAR & Map(Player(MyIndex).Map).PanoSup & SEP_CHAR & Map(Player(MyIndex).Map).TranSup & SEP_CHAR & Map(Player(MyIndex).Map).Fog & SEP_CHAR & Map(Player(MyIndex).Map).FogAlpha & SEP_CHAR & Map(Player(MyIndex).Map).guildSoloView & SEP_CHAR & Map(Player(MyIndex).Map).petView & SEP_CHAR & Map(Player(MyIndex).Map).traversable & SEP_CHAR & Map(Player(MyIndex).Map).meteo & SEP_CHAR
     
     Packet = Packet & END_CHAR
     DoEvents
