@@ -530,19 +530,27 @@ Begin VB.Form frmServer
             Strikethrough   =   0   'False
          EndProperty
          ForeColor       =   &H80000008&
-         Height          =   1455
-         Left            =   6360
-         ScaleHeight     =   95
+         Height          =   2055
+         Left            =   6240
+         ScaleHeight     =   135
          ScaleMode       =   3  'Pixel
-         ScaleWidth      =   215
+         ScaleWidth      =   247
          TabIndex        =   132
-         Top             =   2400
+         Top             =   2280
          Visible         =   0   'False
-         Width           =   3255
+         Width           =   3735
+         Begin VB.CommandButton CommandMeteoMap 
+            Caption         =   "activer la météo par map"
+            Height          =   255
+            Left            =   240
+            TabIndex        =   189
+            Top             =   1080
+            Width           =   3255
+         End
          Begin VB.CommandButton Command65 
             Caption         =   "Neige"
             Height          =   255
-            Left            =   1680
+            Left            =   2160
             TabIndex        =   138
             Top             =   720
             Width           =   1335
@@ -558,7 +566,7 @@ Begin VB.Form frmServer
          Begin VB.CommandButton Command63 
             Caption         =   "Orage"
             Height          =   255
-            Left            =   1680
+            Left            =   2160
             TabIndex        =   136
             Top             =   480
             Width           =   1335
@@ -574,20 +582,39 @@ Begin VB.Form frmServer
          Begin VB.CommandButton Command61 
             Caption         =   "Annuler"
             Height          =   255
-            Left            =   1560
+            Left            =   2160
             TabIndex        =   133
-            Top             =   1080
-            Width           =   1575
+            Top             =   1680
+            Width           =   1335
+         End
+         Begin VB.Label Label12 
+            AutoSize        =   -1  'True
+            BackStyle       =   0  'Transparent
+            Caption         =   "La météo par map est activée actuellement"
+            BeginProperty Font 
+               Name            =   "Segoe UI"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   195
+            Left            =   120
+            TabIndex        =   190
+            Top             =   1440
+            Width           =   3240
          End
          Begin VB.Label Label5 
             AutoSize        =   -1  'True
             BackStyle       =   0  'Transparent
             Caption         =   "Météologie présentement: Aucune"
             Height          =   195
-            Left            =   120
+            Left            =   45
             TabIndex        =   134
             Top             =   120
-            Width           =   2475
+            Width           =   3435
          End
       End
       Begin VB.PictureBox picWarp 
@@ -2927,7 +2954,31 @@ Private Sub Command58_Click()
 End Sub
 
 Private Sub Command59_Click()
+    Dim MeteoParMap As Byte
+    
     picWeather.Visible = True
+    
+    MeteoParMap = Val(GetVar(App.Path & "\Data.ini", "CONFIG", "MeteoParMap"))
+    
+    If MeteoParMap = 0 Then
+        frmServer.Label12.Caption = "La météo par map est actuellement désactivée"
+        frmServer.CommandMeteoMap.Caption = "activer la météo par map"
+        Select Case GameWeather
+            Case 0 'Soleil
+                frmServer.Label5.Caption = "Météologie présentement: Aucune"
+            Case 1 'Pluie
+                frmServer.Label5.Caption = "Météologie présentement: Pluie"
+            Case 2 'Neige
+                frmServer.Label5.Caption = "Météologie présentement: Neige"
+            Case 3 'Orage
+                frmServer.Label5.Caption = "Météologie présentement: Orage"
+        End Select
+    Else
+        frmServer.Label12.Caption = "La météo par map est actuellement activée"
+        frmServer.CommandMeteoMap.Caption = "désactiver la météo par map"
+        frmServer.Label5.Caption = "Météologie présentement: Météo par map"
+    End If
+    
 End Sub
 
 Private Sub Command6_Click()
@@ -3044,6 +3095,25 @@ Dim i As Long
         Call ShowPLR(i)
     Next i
     
+End Sub
+
+Private Sub CommandMeteoMap_Click()
+    
+    Dim MeteoParMap As Byte
+      
+    MeteoParMap = Val(GetVar(App.Path & "\Data.ini", "CONFIG", "MeteoParMap"))
+    
+    If MeteoParMap = 0 Then
+        PutVar App.Path & "\Data.ini", "CONFIG", "MeteoParMap", 1
+        frmServer.Label12.Caption = "La météo par map est actuellement activée"
+        frmServer.Label5.Caption = "Météorologie présentement : Météo par map"
+        frmServer.CommandMeteoMap.Caption = "désactiver la météo par map"
+    Else
+        PutVar App.Path & "\Data.ini", "CONFIG", "MeteoParMap", 0
+        frmServer.Label12.Caption = "La météo par map est actuellement désactivée"
+        frmServer.CommandMeteoMap.Caption = "activer la météo par map"
+        frmServer.Label5.Caption = "Météorologie présentement: Aucune"
+    End If
 End Sub
 
 Private Sub CustomMsg_Click(Index As Integer)

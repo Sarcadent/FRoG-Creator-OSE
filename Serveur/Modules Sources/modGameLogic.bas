@@ -1776,21 +1776,23 @@ Dim OldMap As Long
     Next i
     'FIN PAPERDOLL
     
-    
-    Select Case Map(MapNum).meteo
-        Case 0 'Soleil
-            Packet = "WEATHER" & SEP_CHAR & WEATHER_NONE & SEP_CHAR & RainIntensity & END_CHAR
-            Call SendDataTo(Index, Packet)
-        Case 1 'Pluie
-            Packet = "WEATHER" & SEP_CHAR & WEATHER_RAINING & SEP_CHAR & RainIntensity & END_CHAR
-            Call SendDataTo(Index, Packet)
-        Case 2 'Neige
-            Packet = "WEATHER" & SEP_CHAR & WEATHER_SNOWING & SEP_CHAR & RainIntensity & END_CHAR
-            Call SendDataTo(Index, Packet)
-        Case 3 'Orage
-            Packet = "WEATHER" & SEP_CHAR & WEATHER_THUNDER & SEP_CHAR & RainIntensity & END_CHAR
-            Call SendDataTo(Index, Packet)
-    End Select
+    'Météo
+    If Val(GetVar(App.Path & "\Data.ini", "CONFIG", "MeteoParMap")) = 1 Then
+        Select Case Map(MapNum).meteo
+            Case 0 'Soleil
+                Packet = "WEATHER" & SEP_CHAR & WEATHER_NONE & SEP_CHAR & RainIntensity & END_CHAR
+                Call SendDataTo(Index, Packet)
+            Case 1 'Pluie
+                Packet = "WEATHER" & SEP_CHAR & WEATHER_RAINING & SEP_CHAR & RainIntensity & END_CHAR
+                Call SendDataTo(Index, Packet)
+            Case 2 'Neige
+                Packet = "WEATHER" & SEP_CHAR & WEATHER_SNOWING & SEP_CHAR & RainIntensity & END_CHAR
+                Call SendDataTo(Index, Packet)
+            Case 3 'Orage
+                Packet = "WEATHER" & SEP_CHAR & WEATHER_THUNDER & SEP_CHAR & RainIntensity & END_CHAR
+                Call SendDataTo(Index, Packet)
+        End Select
+    End If
 
 Exit Sub
 er:

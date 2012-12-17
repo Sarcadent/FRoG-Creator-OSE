@@ -4321,6 +4321,10 @@ End Sub
 Sub SendWeatherToAll()
 Dim i As Long
 Dim Weather As String
+
+    PutVar App.Path & "\Data.ini", "CONFIG", "MeteoParMap", 0
+    frmServer.Label12.Caption = "La météo par map est actuellement désactivée"
+    frmServer.CommandMeteoMap.Caption = "activer La météo par map"
     
     Select Case GameWeather
         Case 0
