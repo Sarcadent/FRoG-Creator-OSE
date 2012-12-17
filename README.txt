@@ -3,10 +3,9 @@ INFORMATION SUR FROG CREATOR SARCADENT'S VERSION:
 Cette version de Frog Creator n'est pas officielle. Elle a pour but d'ajouter des fonctionnalités qui selon moi (Sarcadent) manquaient.
 Liste des ajouts fait:
 -un système de niveau requis pour les objets
--
+-un système météo par map
 -
 Liste des ajouts à faire:
--un système météo par map
 -un système de son pour les armes
 -plus de sub disponible en main.txt
 -possibilité de mettre des pnj dans une guilde
