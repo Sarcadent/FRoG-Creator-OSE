@@ -5,6 +5,7 @@ Liste des ajouts fait:
 -un système de niveau requis pour les objets
 -un système météo par map
 -
+-.
 Liste des ajouts à faire:
 -un système de son pour les armes
 -plus de sub disponible en main.txt
